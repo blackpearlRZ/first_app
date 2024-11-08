@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.homep {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;  /* Full height of the viewport */
+
+    background-attachment: fixed; /* Keep background fixed in this section too */
+}
+ 
+.homep div img{
+    width: 300px;
+    height: 250px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+ 
+ 
+.seconddisplay{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 50%;
+}
+ 
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 12px;
+    text-shadow: 2px 2px 5px rgba(31, 31, 31, 0.721);
+}
+ 
+ 
+.text p{
+    color : #100d4e;
+}
+ 
+.text h4{
+    color : #000000dc;
+    font-style: italic;
+    font-size: 11px;
+   
+}
+ 
+ 
+.gloomy{
+    width: 50%;
+    height: 90vh;
+    backdrop-filter: blur(7rem);
+    padding-top: 5rem;
+    background-color: black;
+ 
+}
