@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 
 function Counter (){
     const [count,setCount] = useState(0)
@@ -13,6 +13,7 @@ function Counter (){
       function desincrement() {
         setCount((prevCount) => prevCount - 1);
       };
+
       return(
         <div className='container'>
             <h2>Current count:</h2>
