@@ -10,13 +10,10 @@ html, body {
     align-items: center;
 }
 button{
-    height: 2rem;
     padding: 0 1rem;
     background-color:  rgb(39, 141, 132);
     font-size: 1rem;
-    border-radius: 1rem;
     color: white;
-    margin-top: 13px;
 }
 button:hover{
     opacity: 0.75;
