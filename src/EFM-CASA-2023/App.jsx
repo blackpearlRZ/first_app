@@ -34,11 +34,65 @@ function App(){
         setListStg([...listStg, formData])
         setError('')
     }
-    console.log(listStg)
+    function supprimer(id){
+        console.log(id)
+        const listupdated = listStg.filter(s => s.id !== id)
+        setListStg(listupdated)
+    }
+    function editer(id, e){
+        e.preventDefault()
+        const formedit = listStg.find(s => s.id == id)
+        if(formedit){
+            setFormData(formedit)
+        }
+    }
+    function vider(e) {
+        e.preventDefault();
+        setFormData({
+            id: Date.now(),
+            matricule: '',
+            nom: '',
+            ville: '',
+            codePostal: '',
+            moyenne: 0,
+        });
+    }
+    
     return(
         <>
         <div className="list-affichage">
-            <h1>Listes des stagiaires</h1>
+            {listStg.length == 0 ? <><h1 style={{color : 'red'}}>Liste des stagiaires vide</h1></>
+            : <>
+            <h1>Liste des stagiaires</h1>
+            <table border={1}>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Matricule</th>
+                        <th>Nom</th>
+                        <th>Ville</th>
+                        <th>code Postal</th>
+                        <th>Moyenne</th>
+                        <th>Supprimer</th>
+                        <th>Editer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {listStg.map(s => 
+                    <tr key={s.id}>
+                        <th>{s.id}</th>
+                        <th>{s.matricule}</th>
+                        <th>{s.nom}</th>
+                        <th>{s.ville}</th>
+                        <th>{s.codePostal}</th>
+                        <th>{s.moyenne}</th>
+                        <th><button onClick={(e) => supprimer(s.id,e)}>Supprimer</button></th>
+                        <th><button onClick={(e) => editer(s.id,e)}>Editer</button></th>
+                    </tr>)}
+                </tbody>
+            </table>
+            </>
+            }
         </div>
         <div className="formulaire">
             <form>
@@ -51,7 +105,7 @@ function App(){
                 <div>
                     <button onClick={ajouter}>Ajouter</button>
                     <button>Filtrer ville et nom</button>
-                    <button>Vider</button>
+                    <button onClick={(e) => vider(e)}>Vider</button>
                     <button>Initialiser recherche</button>
                 </div>
             </form>
