@@ -1,0 +1,7 @@
+.stagiaire_container{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}

@@ -1,0 +1,7 @@
+.nav_bar{
+    display: flex;
+    background-color:  black;
+    justify-content: flex-end;
+    gap: 3rem;
+    color: white;
+}

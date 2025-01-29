@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.stagiaire{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+}
+.stagiaire img{
+    width: 15rem;
+}

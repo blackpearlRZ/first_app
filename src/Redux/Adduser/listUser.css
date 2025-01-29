@@ -1,0 +1,14 @@
+.user_list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.user_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(195, 194, 142);
+    padding: 2rem;
+}

@@ -11,7 +11,8 @@ export default function App(){
         fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         .then((response)=>{ return response.json()})
         .then((user)=>{setAddress(user.address);setUtilisateur(user);}) 
-        },[id] )
+        },[id] 
+    )
     return(
         <>
         <h1>Details utilisateur</h1>

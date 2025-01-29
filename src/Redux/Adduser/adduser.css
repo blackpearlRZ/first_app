@@ -1,0 +1,18 @@
+.form_user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
+
+.form_user button{
+    width: fit-content;
+    margin-top: 1rem;
+}
+
+.form_user h2{
+    margin-bottom: 1rem;
+}
