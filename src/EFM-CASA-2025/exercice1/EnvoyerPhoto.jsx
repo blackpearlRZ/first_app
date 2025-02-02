@@ -6,7 +6,7 @@ export default function EnvoyerPhoto() {
     <fieldset style={{width : 'fit-content'}}>
         <legend>Envoyer nous votre photo</legend>
         <form>
-            <input type="file" /><br/><br/>
+            <input type="file" accept='image/*'/><br/><br/>
             <button>Effacer</button>
             <button>Envoyer</button>
         </form>
